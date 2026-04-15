@@ -1,0 +1,27 @@
+<resources>
+    <style name="Theme.ABCKeyboard" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent_color</item>
+        <item name="colorPrimaryVariant">@color/accent_pressed</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+
+    <style name="KeyStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@drawable/key_bg</item>
+        <item name="android:textColor">@color/text_color_dark</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="KeyStyle.Special">
+        <item name="android:background">@drawable/key_bg_special</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="KeyStyle.Accent">
+        <item name="android:background">@drawable/key_bg_accent</item>
+    </style>
+</resources>

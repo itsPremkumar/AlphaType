@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background colors -->
+    <color name="keyboard_bg_dark">#121212</color>
+    <color name="keyboard_bg_light">#E0E5EC</color>
+
+    <!-- Key colors -->
+    <color name="key_normal_dark">#2A2A2A</color>
+    <color name="key_pressed_dark">#404040</color>
+    <color name="key_shadow_dark">#0A0A0A</color>
+    
+    <color name="key_normal_light">#FFFFFF</color>
+    <color name="key_pressed_light">#D1D9E6</color>
+
+    <color name="text_color_dark">#FFFFFF</color>
+    <color name="text_color_light">#333333</color>
+
+    <!-- Accent / Special keys -->
+    <color name="accent_color">#FF4081</color>
+    <color name="accent_pressed">#F50057</color>
+    
+    <color name="special_key_dark">#1E1E1E</color>
+    <color name="special_key_light">#D1D9E6</color>
+</resources>

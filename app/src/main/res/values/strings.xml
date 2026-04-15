@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">AlphaType</string>
+    <string name="keyboard_name">AlphaType Keyboard</string>
+    <string name="key_abc">ABC</string>
+    <string name="key_123">123</string>
+    <string name="key_qwerty">QWERTY</string>
+    <string name="key_enter">Enter</string>
+    <string name="key_space">Space</string>
+    <string name="label_learning_mode">Learning Mode</string>
+    <string name="hint_a">A for Apple</string>
+    <string name="hint_b">B for Ball</string>
+    <string name="hint_c">C for Cat</string>
+    <string name="hint_d">D for Dog</string>
+    <string name="hint_e">E for Elephant</string>
+    <string name="hint_f">F for Fish</string>
+    <string name="hint_g">G for Goat</string>
+    <string name="hint_h">H for Hat</string>
+    <string name="hint_i">I for Ice Cream</string>
+    <string name="hint_j">J for Jug</string>
+    <string name="hint_k">K for Kite</string>
+    <string name="hint_l">L for Lion</string>
+    <string name="hint_m">M for Monkey</string>
+    <string name="hint_n">N for Nest</string>
+    <string name="hint_o">O for Orange</string>
+    <string name="hint_p">P for Parrot</string>
+    <string name="hint_q">Q for Queen</string>
+    <string name="hint_r">R for Rabbit</string>
+    <string name="hint_s">S for Sun</string>
+    <string name="hint_t">T for Tiger</string>
+    <string name="hint_u">U for Umbrella</string>
+    <string name="hint_v">V for Van</string>
+    <string name="hint_w">W for Watch</string>
+    <string name="hint_x">X for Xylophone</string>
+    <string name="hint_y">Y for Yak</string>
+    <string name="hint_z">Z for Zebra</string>
+</resources>
