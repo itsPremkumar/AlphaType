@@ -165,7 +165,7 @@ class SetupActivity : AppCompatActivity() {
         number.text = "✓"
         number.setTextColor(0xFF0D0D1A.toInt())
         status.text = "✓"
-        status.setTextColor(0xFF00E5FF.toInt())
+        status.setTextColor(0xFF536DFE.toInt()) // Professional Indigo
     }
 
     private fun markStepActive(circle: View, number: TextView) {

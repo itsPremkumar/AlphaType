@@ -21,7 +21,7 @@ class ABCKeyboardService : InputMethodService(), TextToSpeech.OnInitListener {
     private var tts: TextToSpeech? = null
     private var isCaps = false
     private var currentLayoutId = R.layout.layout_abc
-    private var isLearningMode = true // Enabled by default as per objective
+    private var isLearningMode = false // Disabled for professional/private mode
 
     override fun onCreate() {
         super.onCreate()

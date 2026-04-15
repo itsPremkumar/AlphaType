@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Background colors -->
-    <color name="keyboard_bg_dark">#121212</color>
-    <color name="keyboard_bg_light">#E0E5EC</color>
+    <!-- Professional Dark Palette (Midnight Graphite) -->
+    <color name="keyboard_bg_dark">#1A1C1E</color>
+    <color name="keyboard_bg_light">#F1F3F5</color>
 
-    <!-- Key colors -->
-    <color name="key_normal_dark">#2A2A2A</color>
-    <color name="key_pressed_dark">#404040</color>
-    <color name="key_shadow_dark">#0A0A0A</color>
+    <!-- Key Primary Colors -->
+    <color name="key_normal_dark">#2E3133</color>
+    <color name="key_pressed_dark">#414446</color>
+    <color name="key_shadow_dark">#0F1112</color>
     
     <color name="key_normal_light">#FFFFFF</color>
-    <color name="key_pressed_light">#D1D9E6</color>
+    <color name="key_pressed_light">#E9ECEF</color>
 
-    <color name="text_color_dark">#FFFFFF</color>
-    <color name="text_color_light">#333333</color>
+    <color name="text_color_dark">#E2E2E6</color>
+    <color name="text_color_light">#212529</color>
 
-    <!-- Accent / Special keys -->
-    <color name="accent_color">#FF4081</color>
-    <color name="accent_pressed">#F50057</color>
+    <!-- Professional Accent (Indigo/Teal) -->
+    <color name="accent_color">#536DFE</color>
+    <color name="accent_pressed">#3D5AFE</color>
     
-    <color name="special_key_dark">#1E1E1E</color>
-    <color name="special_key_light">#D1D9E6</color>
+    <color name="special_key_dark">#242628</color>
+    <color name="special_key_light">#DEE2E6</color>
+    
+    <!-- Privacy Shield Indicator -->
+    <color name="privacy_safe">#00E676</color>
 </resources>

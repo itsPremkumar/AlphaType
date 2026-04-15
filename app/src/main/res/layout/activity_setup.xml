@@ -53,7 +53,7 @@
             android:text="@string/setup_status_pending"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:textColor="#FF6B6B"
+            android:textColor="#536DFE"
             android:background="@drawable/setup_card_bg"
             android:letterSpacing="0.1" />
 
@@ -339,7 +339,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/setup_done_title"
-                android:textColor="#00E5FF"
+                android:textColor="#536DFE"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 

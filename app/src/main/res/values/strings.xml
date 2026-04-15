@@ -35,17 +35,17 @@
     <string name="hint_z">Z for Zebra</string>
 
     <!-- Setup Activity -->
-    <string name="setup_subtitle">Your smart learning keyboard</string>
-    <string name="setup_status_pending">⚙ SETUP REQUIRED</string>
-    <string name="setup_status_ready">✓ READY TO USE</string>
+    <string name="setup_subtitle">Private • Secure • Professional</string>
+    <string name="setup_status_pending">⚙ CONFIGURATION REQUIRED</string>
+    <string name="setup_status_ready">✓ PRIVACY VERIFIED</string>
 
-    <string name="setup_step1_title">Enable AlphaType</string>
-    <string name="setup_step1_desc">Allow AlphaType in your keyboard settings</string>
-    <string name="setup_btn_enable">Enable in Settings</string>
-    <string name="setup_btn_enabled">✓ Enabled</string>
+    <string name="setup_step1_title">Active Privacy</string>
+    <string name="setup_step1_desc">Enable your secure input channel</string>
+    <string name="setup_btn_enable">Activate Keyboard</string>
+    <string name="setup_btn_enabled">✓ Activated</string>
 
-    <string name="setup_step2_title">Set as Default</string>
-    <string name="setup_step2_desc">Switch to AlphaType as your active keyboard</string>
+    <string name="setup_step2_title">Standard Set</string>
+    <string name="setup_step2_desc">Set AlphaType as your secure default</string>
     <string name="setup_btn_switch">Switch Keyboard</string>
     <string name="setup_btn_active">✓ Active</string>
 
