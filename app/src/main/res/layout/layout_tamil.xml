@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <!-- Row 1: Tamil vowels அ ஆ இ ஈ உ உ ஊ எ ஏ ஐ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button style="@style/KeyStyle" android:text="அ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ஆ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="இ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ஈ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="உ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ஊ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="எ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ஏ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ஐ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ஒ" android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Row 2: Tamil consonants க ங ச ஞ ட ண த ந ப ம -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button style="@style/KeyStyle" android:text="க" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ங" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ச" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ஞ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ட" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ண" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="த" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ந" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ப" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ம" android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Row 3: Tamil consonants ய ர ல வ ழ ள ற ன + delete -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button style="@style/KeyStyle" android:text="ய" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ர" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ல" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="வ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ழ" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ள" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ற" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="ன" android:layout_weight="1" />
+        <Button style="@style/KeyStyle.Special" android:id="@+id/key_delete_ta" android:text="⌫" android:layout_weight="2" />
+    </LinearLayout>
+
+    <!-- Row 4: Switch, Space, Enter -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button style="@style/KeyStyle.Special" android:id="@+id/key_switch_abc_ta" android:text="@string/key_abc" android:layout_weight="2" />
+        <Button style="@style/KeyStyle" android:id="@+id/key_space_ta" android:text="@string/key_space" android:layout_weight="4" />
+        <Button style="@style/KeyStyle.Accent" android:id="@+id/key_enter_ta" android:text="@string/key_enter" android:layout_weight="2" />
+    </LinearLayout>
+
+</LinearLayout>
