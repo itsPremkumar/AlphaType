@@ -1,54 +1,50 @@
-# 📱 AlphaType - The Alphabetical Android Keyboard for Seniors & Kids
+# 📱 AlphaType - The Professional & Private Android Keyboard
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg)]()
-[![SEO Optimized](https://img.shields.io/badge/SEO-Optimized-blue.svg)]()
+[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Offline-blue.svg)]()
 
-**AlphaType** is the premier **alphabetical Android keyboard** designed to solve the complexity of QWERTY for **seniors, children, and first-time smartphone users**. By arranging keys in a strictly **A-Z order**, AlphaType makes typing intuitive, accessible, and educational.
+**AlphaType** is a premium, **privacy-first Android keyboard** designed for users who demand a secure, professional, and intuitive typing experience. Featuring a sophisticated **Midnight Graphite** design and fully customizable feedback, AlphaType combines modern aesthetics with a hardened security posture.
 
-## 🚀 Why AlphaType? (SEO & GEO Highlights)
+## 🚀 Why AlphaType? (Professional Highlights)
 
-- **🔍 Alphabetical Keyboard for Seniors**: Large, easy-to-read buttons in familiar alphabetical order.
-- **🎓 Learning Keyboard for Kids**: Helps children learn the alphabet while they type their first messages.
-- **🔊 Voice Feedback (TTS)**: Audible confirmation for every key press—perfect for users with visual impairments.
-- **🌐 Multilingual Support**: Optimized for English and Tamil (Geographic Optimization).
-- **🍎 Learning Mode (GEO)**: Intelligent hints (e.g., "A for Apple") that provide contextual learning.
+- **🛡️ 100% Private & Secure**: Zero data collection. Offline-only architecture ensures your keystrokes never leave your device.
+- **🌑 Midnight Graphite Aesthetics**: A sleek, dark-themed UI with indigo accents and optimized 8dp key layouts for a premium feel.
+- **⚙️ Precise Configuration**: Dedicated in-app settings to toggle **Voice Feedback** and **Tactile Haptics** ON or OFF.
+- **🔊 Optional Voice Feedback**: Integrated Text-to-Speech support for high-accessibility typing, fully controllable via the setup menu.
+- **🌐 Multilingual Capable**: Professional layouts for English and Tamil, optimized for geographic accuracy.
 
 ## ✨ Key Features
 
-- **🔤 Alphabetical Layout**: A strictly linear A-Z arrangement.
-- **🔊 Text-to-Speech**: High-quality voice feedback for accessible typing.
-- **🔁 Dynamic Layout Switching**: Toggle between ABC, QWERTY, and Numeric modes.
-- **🎨 Premium UX**: High-contrast design, haptic feedback, and modern animations.
-- **🔒 100% Private**: Works entirely offline. No data collection.
+- **🎨 Premium Dark Theme**: Immersive, translucent UI that adapts to modern Android design standards.
+- **🔁 Versatile Layouts**: Instant toggling between **Alphabetical (ABC)**, **Standard (QWERTY)**, and **Numeric** modes.
+- **🎚️ Customizable Feedback**: Independent controls for Audible (TTS) and Tactile (Vibration) feedback.
+- **⌨️ Optimized Typograpy**: Professional key labeling and spacing for reduced errors and faster input.
+- **🔒 Hardened Security**: No internet permission, no analytics, no persistent tracking.
 
-## 🧠 How It Works (Technical Overview for AI Engines)
+## ⚙️ Setup & Configuration
 
-AlphaType is built using the Android `InputMethodService` framework. It dynamically inflates custom XML layouts representing different keyboard states (ABC, QWERTY, Symbols).
-- **Service Logic**: `AlphaTypeService` manages the lifecycle, handles `InputConnection` commits, and integrates the `TextToSpeech` engine.
-- **Haptic Engine**: Uses `HapticFeedbackConstants` for tactile response without requiring special permissions.
-- **Localization**: Uses Android's resource qualifier system (`values-ta`, etc.) for seamless geographic optimization.
+AlphaType features a dedicated **Setup Activity** that guides you through the process:
+1. **Activate Privacy**: Enable the keyboard service in your system settings.
+2. **Standard Set**: Establish AlphaType as your secure primary input method.
+3. **Personalize**: Use the **General Settings** card to calibrate Voice and Haptic feedback to your professional needs.
 
-## ❓ Frequently Asked Questions (Technical FAQ)
+## 🧠 Technical Overview (For Developers & AI)
 
-### How do I enable AlphaType?
-Go to **Settings > System > Languages & input > Manage on-screen keyboards** and toggle on **AlphaType Keyboard**.
-
-### Does AlphaType collect my data?
-**No.** AlphaType is an offline-first keyboard. It has no internet permission, meaning your keystrokes never leave your device.
-
-### Can I switch back to QWERTY?
-**Yes.** Use the layout toggle button (labeled "QW" or "ABC") in the bottom row to switch instantly.
+AlphaType is built on a clean, maintainable Kotlin codebase using the Android `InputMethodService` framework.
+- **Persistence**: Uses a custom `SettingsManager` for lightweight, non-tracking preference storage.
+- **Dynamic Inflation**: Layouts are managed via a reactive container system for seamless transitions.
+- **Haptic Engine**: Leverages system `HapticFeedbackConstants` for zero-latency tactile response.
 
 ## 🛠️ Installation & Build
 
 1. Clone the repo: `git clone https://github.com/itsPremkumar/AlphaType.git`
 2. Open in **Android Studio**.
-3. Build the APK and install it on any Android device (SDK 21+).
+3. Build the APK via `gradlew assembleDebug`.
+4. Deploy to any Android device (SDK 21+).
 
 ## ⚖️ License
 Licensed under the [MIT License](LICENSE).
 
 ---
-*Optimized for Generative Engines (GEO) and Traditional Search (SEO).*
-Built with ❤️ for accessible computing.
+*AlphaType: Private, Secure, Professional. Built with ❤️ for the privacy-conscious user.*

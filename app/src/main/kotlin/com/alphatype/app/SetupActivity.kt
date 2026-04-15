@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.switchmaterial.SwitchMaterial
 
 class SetupActivity : AppCompatActivity() {
 
@@ -29,6 +30,8 @@ class SetupActivity : AppCompatActivity() {
     private lateinit var btnEnable: Button
     private lateinit var btnSetDefault: Button
     private lateinit var testInput: EditText
+    private lateinit var switchVoice: SwitchMaterial
+    private lateinit var switchVibration: SwitchMaterial
     private lateinit var bannerDone: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,7 +55,21 @@ class SetupActivity : AppCompatActivity() {
         btnEnable = findViewById(R.id.btn_enable_keyboard)
         btnSetDefault = findViewById(R.id.btn_set_default)
         testInput = findViewById(R.id.test_input)
+        switchVoice = findViewById(R.id.switch_voice)
+        switchVibration = findViewById(R.id.switch_vibration)
         bannerDone = findViewById(R.id.banner_done)
+
+        // Initialize switch states
+        switchVoice.isChecked = SettingsManager.isVoiceEnabled(this)
+        switchVibration.isChecked = SettingsManager.isVibrationEnabled(this)
+
+        // Handle switch changes
+        switchVoice.setOnCheckedChangeListener { _, isChecked ->
+            SettingsManager.setVoiceEnabled(this, isChecked)
+        }
+        switchVibration.setOnCheckedChangeListener { _, isChecked ->
+            SettingsManager.setVibrationEnabled(this, isChecked)
+        }
 
         // Step 1: Open keyboard enable settings
         btnEnable.setOnClickListener {

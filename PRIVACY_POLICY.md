@@ -2,26 +2,27 @@
 
 Last updated: April 15, 2026
 
-AlphaType ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains our practices regarding the collection, use, and disclosure of information through our mobile application.
+AlphaType ("we," "our," or "us") is dedicated to providing a professional and private typing experience. This Privacy Policy details our commitment to your security and our offline-first architecture.
 
-## 1. Data Collection
-**We do not collect any personal data.** 
-AlphaType is designed to function entirely offline. The application does not:
-- Collect or store your keystrokes.
-- Access your contacts, location, or personal files.
-- Connect to the internet.
-- Use any third-party analytics or tracking software.
+## 1. Zero Data Collection
+**We do not collect, store, or transmit any data.** 
+AlphaType is built to function entirely offline and does not possess the `INTERNET` permission. As a result:
+- Your keystrokes are never recorded or sent to any server.
+- No personal identifiers (IP, device ID, etc.) are gathered.
+- No third-party analytics, tracking, or advertising SDKs are included.
 
-## 2. Text-to-Speech
-The application uses the standard Android Text-to-Speech (TTS) engine to provide voice feedback. This process happens locally on your device.
+## 2. Text-to-Speech (Optional)
+AlphaType includes optional Voice Feedback powered by the standard Android Text-to-Speech (TTS) engine. 
+- TTS processing occurs **entirely locally** on your device.
+- This feature is disabled by default and can be toggled by the user in the app settings.
 
-## 3. Permissions
-The application requires the following permissions to function:
-- `BIND_INPUT_METHOD`: Required to operate as a system-wide keyboard.
-- `VIBRATE`: Used to provide haptic feedback on key presses.
+## 3. Mandatory Permissions
+AlphaType only requests permissions essential to core keyboard functionality:
+- `BIND_INPUT_METHOD`: Required to operate as a system-wide input service.
+- `VIBRATE`: Used solely for providing user-controlled haptic feedback.
 
-## 4. Changes to This Policy
-We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.
+## 4. Security & Hardening
+Our project is open-source and available for audit. By eliminating internet access at the manifest level, we provide a hardened environment for secure communication.
 
-## 5. Contact Us
-If you have any questions about this Privacy Policy, please contact us at: [Your Email/Website]
+## 5. Contact
+For security inquiries or questions, contact us via our GitHub repository.

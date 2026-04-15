@@ -60,7 +60,9 @@ class ABCKeyboardService : InputMethodService(), TextToSpeech.OnInitListener {
     }
 
     private fun onKeyClick(button: Button) {
-        button.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
+        if (SettingsManager.isVibrationEnabled(this)) {
+            button.performHapticFeedback(android.view.HapticFeedbackConstants.KEYBOARD_TAP)
+        }
         val text = button.text.toString()
         val ic = currentInputConnection ?: return
 
@@ -105,6 +107,12 @@ class ABCKeyboardService : InputMethodService(), TextToSpeech.OnInitListener {
     }
 
     private fun speakKey(text: String) {
+        if (!SettingsManager.isVoiceEnabled(this)) return
+        
+        if (tts == null) {
+            tts = TextToSpeech(this, this)
+        }
+
         if (isLearningMode) {
             val hintResId = resources.getIdentifier("hint_${text.lowercase()}", "string", packageName)
             val speechText = if (hintResId != 0) getString(hintResId) else text

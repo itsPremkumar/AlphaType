@@ -55,4 +55,11 @@
 
     <string name="setup_done_title">You\'re All Set!</string>
     <string name="setup_done_desc">AlphaType is configured and ready. Enjoy typing!</string>
+
+    <!-- Settings Labels -->
+    <string name="settings_title">General Settings</string>
+    <string name="setting_voice_title">Voice Feedback</string>
+    <string name="setting_voice_desc">Speak keys when pressed (Text-to-Speech)</string>
+    <string name="setting_vibration_title">Haptic Feedback</string>
+    <string name="setting_vibration_desc">Vibrate keys when pressed (Tactile)</string>
 </resources>
