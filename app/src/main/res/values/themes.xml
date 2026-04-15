@@ -24,4 +24,14 @@
     <style name="KeyStyle.Accent">
         <item name="android:background">@drawable/key_bg_accent</item>
     </style>
+
+    <!-- Setup Activity Theme -->
+    <style name="Theme.AlphaType.Setup" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#00E5FF</item>
+        <item name="colorPrimaryVariant">#00B0FF</item>
+        <item name="colorOnPrimary">#0D0D1A</item>
+        <item name="android:statusBarColor">#0D0D1A</item>
+        <item name="android:navigationBarColor">#0D0D1A</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
 </resources>

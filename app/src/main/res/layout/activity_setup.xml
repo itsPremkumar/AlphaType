@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_name" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:letterSpacing="0.05" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/setup_subtitle"
+            android:textSize="15sp"
+            android:textColor="#80FFFFFF"
+            android:gravity="center" />
+
+        <!-- Status Badge -->
+        <TextView
+            android:id="@+id/status_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:text="@string/setup_status_pending"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#FF6B6B"
+            android:background="@drawable/setup_card_bg"
+            android:letterSpacing="0.1" />
+
+        <!-- ====== STEP 1: Enable Keyboard ====== -->
+        <LinearLayout
+            android:id="@+id/card_step1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/setup_card_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Step Number -->
+                <FrameLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp">
+
+                    <View
+                        android:id="@+id/step1_circle"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/circle_step" />
+
+                    <TextView
+                        android:id="@+id/step1_number"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#0D0D1A"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setup_step1_title"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/setup_step1_desc"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Status Icon -->
+                <TextView
+                    android:id="@+id/step1_status"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:text="○"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_enable_keyboard"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_primary"
+                android:text="@string/setup_btn_enable"
+                android:textColor="#0D0D1A"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:letterSpacing="0.02" />
+        </LinearLayout>
+
+        <!-- ====== STEP 2: Set as Default ====== -->
+        <LinearLayout
+            android:id="@+id/card_step2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/setup_card_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <FrameLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp">
+
+                    <View
+                        android:id="@+id/step2_circle"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/circle_step_inactive" />
+
+                    <TextView
+                        android:id="@+id/step2_number"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setup_step2_title"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/setup_step2_desc"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/step2_status"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:text="○"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_set_default"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_primary"
+                android:text="@string/setup_btn_switch"
+                android:textColor="#0D0D1A"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:letterSpacing="0.02" />
+        </LinearLayout>
+
+        <!-- ====== STEP 3: Test It ====== -->
+        <LinearLayout
+            android:id="@+id/card_step3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/setup_card_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <FrameLayout
+                    android:layout_width="36dp"
+                    android:layout_height="36dp">
+
+                    <View
+                        android:id="@+id/step3_circle"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/circle_step_inactive" />
+
+                    <TextView
+                        android:id="@+id/step3_number"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setup_step3_title"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/setup_step3_desc"
+                        android:textColor="#80FFFFFF"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/step3_status"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:text="○"
+                    android:textColor="#80FFFFFF"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/test_input"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/setup_card_bg"
+                android:hint="@string/setup_test_hint"
+                android:textColorHint="#40FFFFFF"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:paddingHorizontal="16dp"
+                android:inputType="text"
+                android:imeOptions="actionDone" />
+        </LinearLayout>
+
+        <!-- All Done Banner -->
+        <LinearLayout
+            android:id="@+id/banner_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/setup_card_done"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎉"
+                android:textSize="40sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/setup_done_title"
+                android:textColor="#00E5FF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/setup_done_desc"
+                android:textColor="#80FFFFFF"
+                android:textSize="14sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Spacer for scroll -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="32dp" />
+
+    </LinearLayout>
+</ScrollView>

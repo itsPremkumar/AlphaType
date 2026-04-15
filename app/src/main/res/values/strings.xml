@@ -33,4 +33,26 @@
     <string name="hint_x">X for Xylophone</string>
     <string name="hint_y">Y for Yak</string>
     <string name="hint_z">Z for Zebra</string>
+
+    <!-- Setup Activity -->
+    <string name="setup_subtitle">Your smart learning keyboard</string>
+    <string name="setup_status_pending">⚙ SETUP REQUIRED</string>
+    <string name="setup_status_ready">✓ READY TO USE</string>
+
+    <string name="setup_step1_title">Enable AlphaType</string>
+    <string name="setup_step1_desc">Allow AlphaType in your keyboard settings</string>
+    <string name="setup_btn_enable">Enable in Settings</string>
+    <string name="setup_btn_enabled">✓ Enabled</string>
+
+    <string name="setup_step2_title">Set as Default</string>
+    <string name="setup_step2_desc">Switch to AlphaType as your active keyboard</string>
+    <string name="setup_btn_switch">Switch Keyboard</string>
+    <string name="setup_btn_active">✓ Active</string>
+
+    <string name="setup_step3_title">Try It Out</string>
+    <string name="setup_step3_desc">Type below to test your new keyboard</string>
+    <string name="setup_test_hint">Tap here to start typing…</string>
+
+    <string name="setup_done_title">You\'re All Set!</string>
+    <string name="setup_done_desc">AlphaType is configured and ready. Enjoy typing!</string>
 </resources>
