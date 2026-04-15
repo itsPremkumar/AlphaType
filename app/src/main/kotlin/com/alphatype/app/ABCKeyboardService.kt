@@ -71,6 +71,7 @@ class ABCKeyboardService : InputMethodService(), TextToSpeech.OnInitListener {
             getString(R.string.key_space) -> ic.commitText(" ", 1)
             getString(R.string.key_abc) -> loadLayout(R.layout.layout_abc)
             getString(R.string.key_123) -> loadLayout(R.layout.layout_numeric)
+            "TA" -> loadLayout(R.layout.layout_tamil)
             "QW" -> loadLayout(R.layout.layout_qwerty)
             else -> {
                 var code = text
