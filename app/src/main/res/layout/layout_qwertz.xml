@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="4dp"
+    android:paddingVertical="8dp">
+
+    <!-- Row 1: QWERTZUIOP (10 keys) -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal">
+        <Button style="@style/KeyStyle" android:text="Q" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="W" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="E" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="R" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="T" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="Z" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="U" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="I" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="O" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="P" android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Row 2: ASDFGHJKL (9 keys, staggered) -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal" android:paddingHorizontal="16dp">
+        <Button style="@style/KeyStyle" android:text="A" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="S" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="D" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="F" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="G" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="H" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="J" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="K" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="L" android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Row 3: Shift + YXCVBNM + Delete (7 letters + 2 specials) -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal">
+        <ImageButton style="@style/KeyStyle.Special" android:src="@drawable/ic_shift" android:tag="⇧" android:layout_weight="1.5" android:scaleType="centerInside" android:tint="@color/text_color_dark" />
+        <Button style="@style/KeyStyle" android:text="Y" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="X" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="C" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="V" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="B" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="N" android:layout_weight="1" />
+        <Button style="@style/KeyStyle" android:text="M" android:layout_weight="1" />
+        <ImageButton style="@style/KeyStyle.Special" android:src="@drawable/ic_backspace" android:tag="⌫" android:layout_weight="1.5" android:scaleType="centerInside" android:tint="@color/text_color_dark" />
+    </LinearLayout>
+
+    <!-- Row 4: ?123, Comma, Globe, Space, Period, Enter -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="52dp" android:orientation="horizontal">
+        <Button style="@style/KeyStyle.Special" android:text="123" android:layout_weight="1.5" />
+        <Button style="@style/KeyStyle" android:text="," android:layout_weight="1" />
+        <ImageButton style="@style/KeyStyle.Special" android:src="@drawable/ic_globe" android:tag="GLOBE" android:layout_weight="1.2" android:scaleType="centerInside" android:tint="@color/text_color_dark" />
+        <Button style="@style/KeyStyle" android:text="SPACE" android:layout_weight="3.5" android:textColor="@android:color/transparent" />
+        <Button style="@style/KeyStyle" android:text="." android:layout_weight="1" />
+        <ImageButton style="@style/KeyStyle.Accent" android:src="@drawable/ic_enter" android:tag="ENTER" android:layout_weight="1.5" android:scaleType="centerInside" android:tint="@color/text_color_dark" />
+    </LinearLayout>
+
+</LinearLayout>

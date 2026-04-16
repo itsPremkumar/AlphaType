@@ -58,8 +58,46 @@ class ABCKeyboardService : InputMethodService(), TextToSpeech.OnInitListener {
         previewPopup?.isTouchable = false
         previewPopup?.elevation = 8f
 
+        applyTheme()
+
+        val defaultLayoutName = SettingsManager.getDefaultLayout(this)
+        currentLayoutId = when (defaultLayoutName) {
+            "qwerty" -> R.layout.layout_qwerty
+            "qwertz" -> R.layout.layout_qwertz
+            "azerty" -> R.layout.layout_azerty
+            else -> R.layout.layout_abc
+        }
+
         loadLayout(currentLayoutId)
         return keyboardRoot
+    }
+
+    override fun onStartInputView(info: EditorInfo?, restarting: Boolean) {
+        super.onStartInputView(info, restarting)
+        if (::keyboardRoot.isInitialized) {
+            applyTheme()
+            if (!restarting && currentLayoutId != R.layout.layout_numeric && currentLayoutId != R.layout.layout_tamil) {
+                val defaultLayoutName = SettingsManager.getDefaultLayout(this)
+                val defaultLayoutId = when (defaultLayoutName) {
+                    "qwerty" -> R.layout.layout_qwerty
+                    "qwertz" -> R.layout.layout_qwertz
+                    "azerty" -> R.layout.layout_azerty
+                    else -> R.layout.layout_abc
+                }
+                loadLayout(defaultLayoutId)
+            }
+        }
+    }
+
+    private fun applyTheme() {
+        val theme = SettingsManager.getTheme(this)
+        val bgColor = when (theme) {
+            "light" -> android.graphics.Color.parseColor("#F1F3F5")
+            "amoled" -> android.graphics.Color.parseColor("#000000")
+            "blue" -> android.graphics.Color.parseColor("#0B192C")
+            else -> android.graphics.Color.parseColor("#1A1C1E") // dark
+        }
+        keyboardRoot.setBackgroundColor(bgColor)
     }
 
     private fun loadLayout(layoutId: Int) {
@@ -150,7 +188,16 @@ class ABCKeyboardService : InputMethodService(), TextToSpeech.OnInitListener {
             "⇧" -> toggleCaps()
             "ENTER", getString(R.string.key_enter) -> ic.sendKeyEvent(android.view.KeyEvent(android.view.KeyEvent.ACTION_DOWN, android.view.KeyEvent.KEYCODE_ENTER))
             "SPACE", getString(R.string.key_space) -> ic.commitText(" ", 1)
-            "ABC", getString(R.string.key_abc) -> loadLayout(R.layout.layout_abc)
+            "ABC", getString(R.string.key_abc) -> {
+                val defaultLayoutName = SettingsManager.getDefaultLayout(this)
+                val defaultLayoutId = when (defaultLayoutName) {
+                    "qwerty" -> R.layout.layout_qwerty
+                    "qwertz" -> R.layout.layout_qwertz
+                    "azerty" -> R.layout.layout_azerty
+                    else -> R.layout.layout_abc
+                }
+                loadLayout(defaultLayoutId)
+            }
             "123", getString(R.string.key_123) -> loadLayout(R.layout.layout_numeric)
             "TA" -> loadLayout(R.layout.layout_tamil)
             "QW" -> loadLayout(R.layout.layout_qwerty)
@@ -166,10 +213,18 @@ class ABCKeyboardService : InputMethodService(), TextToSpeech.OnInitListener {
     }
 
     private fun cycleLayout() {
+        val defaultLayoutName = SettingsManager.getDefaultLayout(this)
+        val defaultLayoutId = when (defaultLayoutName) {
+            "qwerty" -> R.layout.layout_qwerty
+            "qwertz" -> R.layout.layout_qwertz
+            "azerty" -> R.layout.layout_azerty
+            else -> R.layout.layout_abc
+        }
+        
         when (currentLayoutId) {
-            R.layout.layout_abc -> loadLayout(R.layout.layout_qwerty)
-            R.layout.layout_qwerty -> loadLayout(R.layout.layout_tamil)
-            else -> loadLayout(R.layout.layout_abc)
+            defaultLayoutId -> loadLayout(R.layout.layout_tamil)
+            R.layout.layout_tamil -> loadLayout(defaultLayoutId)
+            else -> loadLayout(defaultLayoutId)
         }
     }
 

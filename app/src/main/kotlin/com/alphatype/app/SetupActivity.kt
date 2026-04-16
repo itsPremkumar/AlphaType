@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.switchmaterial.SwitchMaterial
@@ -32,6 +35,8 @@ class SetupActivity : AppCompatActivity() {
     private lateinit var testInput: EditText
     private lateinit var switchVoice: SwitchMaterial
     private lateinit var switchVibration: SwitchMaterial
+    private lateinit var spinnerTheme: Spinner
+    private lateinit var spinnerLayout: Spinner
     private lateinit var bannerDone: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,6 +62,8 @@ class SetupActivity : AppCompatActivity() {
         testInput = findViewById(R.id.test_input)
         switchVoice = findViewById(R.id.switch_voice)
         switchVibration = findViewById(R.id.switch_vibration)
+        spinnerTheme = findViewById(R.id.spinner_theme)
+        spinnerLayout = findViewById(R.id.spinner_layout)
         bannerDone = findViewById(R.id.banner_done)
 
         // Initialize switch states
@@ -71,6 +78,35 @@ class SetupActivity : AppCompatActivity() {
             SettingsManager.setVibrationEnabled(this, isChecked)
         }
 
+        // Setup Theme Spinner
+        val themeOptions = arrayOf("Midnight Dark", "Light", "AMOLED Black", "Navy Blue")
+        val themeValues = arrayOf("dark", "light", "amoled", "blue")
+        val themeAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, themeOptions)
+        themeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerTheme.adapter = themeAdapter
+        val currentThemeValue = SettingsManager.getTheme(this)
+        spinnerTheme.setSelection(themeValues.indexOf(currentThemeValue).takeIf { it >= 0 } ?: 0)
+        spinnerTheme.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                SettingsManager.setTheme(this@SetupActivity, themeValues[position])
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
+
+        // Setup Layout Spinner
+        val layoutOptions = arrayOf("ABC", "QWERTY", "QWERTZ", "AZERTY")
+        val layoutValues = arrayOf("abc", "qwerty", "qwertz", "azerty")
+        val layoutAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, layoutOptions)
+        layoutAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerLayout.adapter = layoutAdapter
+        val currentLayoutValue = SettingsManager.getDefaultLayout(this)
+        spinnerLayout.setSelection(layoutValues.indexOf(currentLayoutValue).takeIf { it >= 0 } ?: 0)
+        spinnerLayout.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                SettingsManager.setDefaultLayout(this@SetupActivity, layoutValues[position])
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
         // Step 1: Open keyboard enable settings
         btnEnable.setOnClickListener {
             val intent = Intent(Settings.ACTION_INPUT_METHOD_SETTINGS)
