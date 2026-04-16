@@ -3,13 +3,25 @@
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
             <solid android:color="@color/key_pressed_dark" />
-            <corners android:radius="8dp" />
+            <corners android:radius="6dp" />
         </shape>
     </item>
     <item>
-        <shape android:shape="rectangle">
-            <solid android:color="@color/special_key_dark" />
-            <corners android:radius="8dp" />
-        </shape>
+        <layer-list>
+            <!-- Shadow layer -->
+            <item android:top="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/key_shadow_dark" />
+                    <corners android:radius="6dp" />
+                </shape>
+            </item>
+            <!-- Main key layer (Special keys are slightly darker) -->
+            <item android:bottom="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/special_key_dark" />
+                    <corners android:radius="6dp" />
+                </shape>
+            </item>
+        </layer-list>
     </item>
 </selector>
