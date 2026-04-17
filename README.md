@@ -38,10 +38,20 @@ AlphaType is built on a clean, maintainable Kotlin codebase using the Android `I
 
 ## 🛠️ Installation & Build
 
+### Development Build
 1. Clone the repo: `git clone https://github.com/itsPremkumar/AlphaType.git`
 2. Open in **Android Studio**.
-3. Build the APK via `gradlew assembleDebug`.
+3. Build the debug APK: `./gradlew assembleDebug`
 4. Deploy to any Android device (SDK 21+).
+
+### Production Build (Sharing ready)
+To create a signed APK that you can share with others:
+1. Run the build script in PowerShell:
+   ```powershell
+   .\build_release.ps1
+   ```
+2. The script will automatically generate a release key and build a signed APK.
+3. Your final file will be saved as **`AlphaType-Production.apk`** in the project root.
 
 ## ⚖️ License
 Licensed under the [MIT License](LICENSE).
